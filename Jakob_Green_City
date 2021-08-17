@@ -1,0 +1,57 @@
+size(1500, 1500)
+
+background(96, 138, 235)
+
+#Fish
+def DrawSimpleFish(x, y):
+    fill(224, 125, 31)
+    ellipse(x, y, 120, 75)
+    fill(224, 212, 31)
+    triangle(x - 60, y, x - 90, y-30, x - 90, y+30)
+    triangle (x + 40, y-50, x + 10, y-50, x - 50, y+20)
+
+    eyeSize = 25
+    ellipse(x + 30, y-10, eyeSize, eyeSize)
+    
+    fill(0, 0, 0)
+    ellipse(x+30, y-10, eyeSize-10, 20)
+
+# Sky
+cloudX = 600
+fill(255, 255, 255)
+stroke(224, 218, 31)
+ellipse(cloudX, 50, 80, 60)
+ellipse(cloudX + 50, 50, 60, 40)
+ellipse(cloudX - 50, 50, 60, 40)
+
+# Sky
+cloudX = 400
+cloudY = 80
+fill(255, 255, 255)
+stroke(224, 218, 31)
+ellipse(cloudX, cloudY, 80, 60)
+ellipse(cloudX + 50, cloudY, 60, 40)
+ellipse(cloudX - 50, cloudY, 60, 40)
+
+#Fiskesnøre
+noFill()
+scale(2.0)
+stroke(255, 102, 0)
+curve(5, 26, 5, 26, 73, 24, 73, 61)
+stroke(0)
+curve(5, 26, 73, 24, 73, 61, 15, 65)
+stroke(255, 102, 0)
+curve(73, 24, 73, 61, 15, 65, 15, 65)
+
+DrawSimpleFish(300, 400)
+scale(2.0)
+DrawSimpleFish(500, 400)
+DrawSimpleFish(200, 500)
+scale(0.8)
+DrawSimpleFish(300, 700)
+scale(1.5)
+DrawSimpleFish(400, 300)
+
+
+
+    
